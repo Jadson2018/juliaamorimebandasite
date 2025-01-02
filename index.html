@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Julia Amorim</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="emailjs.js"></script>
+    <nav class="navbar navbar-expand-lg" style="background-color: black;">
+        <div class="container-fluid">
+          <a class="navbar-brand brand" href="#" style="color:white">Julia Amorim</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html" style="color:grey">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agenda.html" style="color:white">Agenda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true" style="color:white">Discografia</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </head>
+  <body class="fundo">
+      <div>
+        <section class="row">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="imagens/capa-art-escuro.png" alt="Primeiro Slide">
+              </div>
+            </div>
+        </div>
+        </section>
+        <section class="row container-fluid">
+             <h2 class="titulo titulo">Julia Amorim</h2>
+             <div class="col-6">
+                    <p class="texto">Julia Costa de Amorim é uma jovem cantora gospel de Barra Nova Sul da cidade de São Mateus no Espírito Santo, que ama louvar a Deus e tocar vidas por meio da música. Com 17 anos, ela se dedica ao louvor também toca guitarra e violão, buscando sempre aprimorar seu talento Como vocalista de sua banda, seu objetivo é levar a mensagem de fé e esperança a todos que a ouvem, impactando corações com seu louvor sincero e apaixonado.</p>
+             </div>
+             <div class="col-6">
+                    <img src="imagens/foto-Julia.jpeg" class="foto">
+             </div>
+        </section>
+        <section class="row container-fluid justify-content-center align-items-center">
+          <h2 class="titulo">Vídeos</h2>
+          <div id="carouselExample" class="carousel slide justify-content-center align-items-center">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video controls width="340" class="video">
+                  <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item">
+                <video controls width="340">
+                  <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item">
+                <video controls width="340">
+                  <source src="videos/video.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="carousel-item">
+                <video controls width="340">
+                  <source src="videos/Julia igreja.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+        <section class="row container-fluid" style="background-image: url('imagens/fundo-forms-guitar-paisagem.png');background-attachment: fixed;">
+          <div class="d-flex justify-content-center align-items-center">
+          <div class="card">
+            <h5 class="card-header" style="background-color: black;color:white">Convite <i class="fa-solid fa-envelope" style="float:right"></i></h5>
+            <div class="card-body">  
+              <p class="card-title">Quer fazer um convite para Julia Amorim? Entre em contato conosco</p>
+             <form onsubmit="sendEmail(event)" id="contactForm">
+              <div class="col-auto">
+                <label for="nome" class="col-form-label">Nome do produtor</label>
+              </div>
+              <input type="text" name="user_name" class="form-control" placeholder="Nome do produtor" id="nome"/>
+              <div class="col-auto">
+                <label for="evento" class="col-form-label">Evento</label>
+              </div>
+              <input type="text" name="evento" class="form-control" placeholder="Evento"/>
+              <div class="col-auto">
+                <label for="email" class="col-form-label">Email</label>
+              </div>
+              <input type="email" name="user_email" class="form-control" placeholder="Email"/>
+              <div class="col-auto">
+                <label for="data" class="col-form-label">Data do evento</label>
+              </div>
+              <input type="date" name="data" class="form-control" placeholder="Data do evento"/>
+              <div class="col-auto">
+                <label for="horario" class="col-form-label">Horario do evento</label>
+              </div>
+              <input type="time" name="horario" class="form-control" placeholder="Horario do evento"/>
+              <div class="col-auto">
+                <label for="cidade" class="col-form-label">Cidade/Estado</label>
+              </div>
+              <input type="text" name="cidade_estado" class="form-control" placeholder="São Mateus/ES"/>
+              <div class="col-auto">
+                <label for="endereco" class="col-form-label">Endereço</label>
+              </div>
+              <input type="text" name="endereco" class="form-control" placeholder="Endereço"/>
+              <div class="col-auto">
+                <label for="celular" class="col-form-label">Numero para contato</label>
+              </div>
+              <input type="text" name="celular" class="form-control" placeholder="(XX) XXXXX-XXXX"/>
+              <div class="col-auto">
+                <label for="mensagem" class="col-form-label">Mensagem</label>
+              </div>
+              <textarea name="message" class="form-control" placeholder="Sua Mensagem"></textarea>
+              <button type="submit" class="btn btn-dark">Enviar</button>
+             </form>
+            </div>
+          </div>
+          </div>
+        </section>
+      </div>
+  </body>
+  <footer>
+    <div class="container-fluid">
+         <div class="row footer-background">
+              <div class="col-sm-12 col-lg-4">
+                    <img src="imagens/logo.jpeg">
+              </div>
+              <div class="col-8 icone-social">
+                <a href="https://www.instagram.com/aajuliaamorim?igsh=MXJ2eG4yejlzcHhz" style="text-decoration:none;color:white"><i class="fa-brands fa-instagram" ></i>@aajuliaamorim</a>
+              </div>
+         </div>
+         <div class="row">
+          <div class="col-12 footer-line">
+            <p class="text-footer">Julia Amorim 2025   |  Desenvolvido por Jadson Costa de Amorim</p>
+          </div>
+         </div>
+    </div>
+  </footer>
+</html>

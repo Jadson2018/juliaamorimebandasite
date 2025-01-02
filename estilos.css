@@ -1,0 +1,75 @@
+.fundo{
+     background: black
+}
+.titulo {
+    font-family: "Ysabeau SC", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color:white;
+    text-align: center;
+    font-size: 50px;
+}
+
+.capa {
+    width: 400px;
+    height: 600px;
+}
+.centro {
+    float:center
+}
+
+.custom-nav {
+    background-color: black; 
+    color: white
+}
+
+.texto {
+    color:white;
+    font-size: 20px;
+    text-align: center;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.brand {
+    font-family: "Ysabeau SC", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    color:white
+}
+
+.foto {
+    width: 200px;
+}
+
+.text-footer {
+    color: white;
+    font-family: "Ysabeau SC", serif;
+    color:black;
+    text-align: center;
+}
+
+.footer-background {
+    background: black;
+}
+
+.footer-line {
+    background:white;
+}
+
+.icone-social {
+     padding-top: 205px;
+}
+
+.icone-social i{
+    color: white;
+    font-size:40px
+}
+
+.video {
+    display: inline;
+}
